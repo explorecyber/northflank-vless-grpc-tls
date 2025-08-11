@@ -8,7 +8,7 @@ set -euo pipefail
 : "${PORT:-443}"
 : "${GRPC_SERVICE_NAME:-grpc}"
 
-TEMPLATE=/etc/xray/config.template.json
+TEMPLATE=/etc/xray/config.json
 OUT=/etc/xray/config.json
 
 cat "$TEMPLATE" \
