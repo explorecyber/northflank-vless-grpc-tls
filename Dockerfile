@@ -10,7 +10,7 @@ RUN curl -fsSL "https://github.com/XTLS/Xray-core/releases/download/v${XRAY_VERS
     && rm /tmp/xray.zip \
     && chmod +x /opt/xray/xray
 
-COPY config.template.json /etc/xray/config.json
+COPY config.json /etc/xray/config.json
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN chmod +x /usr/local/bin/entrypoint.sh
