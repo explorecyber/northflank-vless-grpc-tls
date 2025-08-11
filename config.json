@@ -1,0 +1,36 @@
+{
+  "inbounds": [
+    {
+      "port": __PORT__,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          { "id": "__UUID__", "level": 0 }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "tls",
+        "tlsSettings": {
+          "alpn": ["h2"],
+          "certificates": [
+            {
+              "certificateFile": "__CERT_PATH__",
+              "keyFile": "__KEY_PATH__"
+            }
+          ]
+        },
+        "grpcSettings": {
+          "serviceName": "__GRPC_SERVICE_NAME__"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
