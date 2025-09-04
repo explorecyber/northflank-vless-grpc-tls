@@ -17,6 +17,7 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-EXPOSE 443/tcp
+# Northflank will handle the port. Remove the EXPOSE instruction.
+# EXPOSE 443/tcp
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
